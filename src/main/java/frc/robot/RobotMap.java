@@ -31,7 +31,7 @@ public class RobotMap {
   public static int leftBackMotor = 4;
   
   //DIO
-  
+  //public static int colorReadingSensor = ;
   //CAN
 
 }
