@@ -28,8 +28,9 @@ public class DownArm extends Command {
   @Override
   protected void execute() {
     if (Math.abs(Robot.arm.armEncoder.getDistance()) > 200 ) {
-      Robot.arm.liftMotor.set(ControlMode.PercentOutput, 80);
-    }else {
+      Robot.arm.liftMotor.set(ControlMode.PercentOutput, 5);
+    }
+    else {
       Robot.arm.liftMotor.set(ControlMode.PercentOutput, 0);
   }
  }

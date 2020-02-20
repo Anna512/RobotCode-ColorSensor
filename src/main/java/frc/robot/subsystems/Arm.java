@@ -17,7 +17,7 @@ import frc.robot.Robot;
 public class Arm extends Subsystem {
   //Create encoder and related variables
   public Encoder armEncoder = new Encoder(RobotMap.armEncoderPorts[0], RobotMap.armEncoderPorts[1], false, Encoder.EncodingType.k4X);
-  private static final Double wheelDiameter = 6.0/12.0;
+  private static final Double whiteSpool = 2.0/12.0;
   
   // Create Motor object
   public WPI_VictorSPX liftMotor = new WPI_VictorSPX(RobotMap.liftMotor);
@@ -25,10 +25,9 @@ public class Arm extends Subsystem {
   //Create a Servo object
   public Servo brakeServo = new Servo(RobotMap.brakeServo);
 
-
   public Arm() {
     //The distance per pulse used here is for the REV-11-1271 encoder.
-    armEncoder.setDistancePerPulse(wheelDiameter*3.14/2048);
+    armEncoder.setDistancePerPulse(whiteSpool*3.14/2048);
     brakeServo.setAngle(0);
   }
 

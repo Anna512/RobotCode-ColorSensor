@@ -50,18 +50,17 @@ public class OI {
   
   private Button encoderTestButton = new JoystickButton(joystick, 7);
   
-  private Button ArmUpButton = new JoystickButton(joystick, 9);
-  private Button ArmDownButton = new JoystickButton(joystick, 11);
-  
-    
+  private Button armUpButton = new JoystickButton(joystick, 9);
+  private Button armDownButton = new JoystickButton(joystick, 11);
+   
   private Button brakeOnButton = new JoystickButton(joystick, 10);
   private Button brakeOffButton = new JoystickButton(joystick, 12);
   
   public OI(){
     encoderTestButton.whenPressed(new DriveAcrossLine());
-
-    encoderTestButton.whenPressed(new DriveAcrossLine());
     brakeOnButton.whenPressed(new BrakeOn());
     brakeOffButton.whenPressed(new BrakeOff());
+    armUpButton.whileHeld(new UpArm());
+    armDownButton.whileHeld(new DownArm());
   }  
 }

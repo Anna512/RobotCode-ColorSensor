@@ -32,7 +32,7 @@ public class RobotMap {
   
   //DIO
   public static int[] driveEncoderPorts = {0, 1};
-  public static int[] armEncoderPorts = {2, 3};
+  public static int[] armEncoderPorts = {8, 9};
   
   //PWM
   public static int liftMotor = 5;
